@@ -83,11 +83,11 @@ export default function RegistrationForm() {
 
   return (
     <div
-      className={`min-h-screen py-8 px-4 sm:px-6 lg:px-8 ${
+      className={`min-h-screen flex flex-col items-center py-8 px-4 sm:px-6 lg:px-8 ${
         isDark ? 'bg-gray-900' : 'bg-gradient-to-br from-blue-50 to-purple-50'
       }`}
     >
-      <div className="max-w-2xl mx-auto">
+      <div className="w-full max-w-full">
         <button
           onClick={handleBack}
           className={`mb-6 px-4 py-2 rounded-lg font-semibold transition ${

@@ -45,17 +45,17 @@ export default function Dashboard() {
 
   return (
     <div
-      className={`min-h-screen ${
+      className={`min-h-screen flex flex-col items-center ${
         isDark ? 'bg-gray-900' : 'bg-gradient-to-br from-blue-50 via-purple-50 to-pink-50'
       }`}
     >
       {/* Hero Section */}
       <section
-        className={`py-12 px-4 sm:px-6 lg:px-8 ${
+        className={`w-full py-12 px-4 sm:px-6 lg:px-8 ${
           isDark ? 'bg-gray-800' : 'bg-gradient-to-r from-blue-500 to-purple-600'
         }`}
       >
-        <div className="max-w-7xl mx-auto text-center">
+        <div className="w-full mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Welcome to College Clubs Hub
           </h1>
@@ -66,7 +66,8 @@ export default function Dashboard() {
       </section>
 
       {/* Important Notices Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-12">
+        <div className="w-full mx-auto">
         <div className="mb-10">
           <h2 className={`text-3xl font-bold mb-2 ${isDark ? 'text-white' : 'text-gray-900'}`}>
             📢 Important Notices
@@ -156,20 +157,23 @@ export default function Dashboard() {
             </div>
           </div>
         </div>
+        </div>
       </section>
 
       {/* Clubs Sections */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <ClubSection
-          title="🖥️ Technical Clubs"
-          clubs={clubsData.technicalClubs}
-          category="technical"
-        />
-        <ClubSection
-          title="🎭 Cultural Clubs"
-          clubs={clubsData.culturalClubs}
-          category="cultural"
-        />
+      <section className="w-full px-4 sm:px-6 lg:px-8 py-12">
+        <div className="w-full mx-auto">
+          <ClubSection
+            title="🖥️ Technical Clubs"
+            clubs={clubsData.technicalClubs}
+            category="technical"
+          />
+          <ClubSection
+            title="🎭 Cultural Clubs"
+            clubs={clubsData.culturalClubs}
+            category="cultural"
+          />
+        </div>
       </section>
     </div>
   );

@@ -13,7 +13,7 @@ export default function ClubCard({ club, category }) {
 
   return (
     <div
-      className={`p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 ${
+      className={`p-6 rounded-xl shadow-lg hover:shadow-2xl transition duration-300 transform hover:-translate-y-1 min-h-80 flex flex-col justify-between ${
         isDark ? 'bg-gray-800 border border-gray-700' : 'bg-white border border-gray-100'
       }`}
     >
@@ -32,28 +32,28 @@ export default function ClubCard({ club, category }) {
         )}
       </div>
 
-      <p className={`text-sm mb-4 line-clamp-2 ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
+      <p className={`text-sm mb-6 line-clamp-3 flex-grow ${isDark ? 'text-gray-400' : 'text-gray-600'}`}>
         {club.description}
       </p>
 
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between mb-6">
         <div className={`text-xs ${isDark ? 'text-gray-400' : 'text-gray-500'}`}>
           <p>👥 {club.members} members</p>
           <p>📅 {club.events.length} events</p>
         </div>
       </div>
 
-      <div className="flex gap-2">
+      <div className="flex gap-3 mt-auto">
         <button
           onClick={handleViewDetails}
-          className="flex-1 px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg transition"
+          className="flex-1 px-4 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg transition"
         >
           View Details
         </button>
         <button
           onClick={handleRegister}
           disabled={!club.recruitmentOpen}
-          className={`flex-1 px-4 py-2 font-semibold rounded-lg transition ${
+          className={`flex-1 px-4 py-3 font-semibold rounded-lg transition ${
             club.recruitmentOpen
               ? 'bg-purple-500 hover:bg-purple-600 text-white cursor-pointer'
               : isDark

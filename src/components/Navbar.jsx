@@ -22,8 +22,9 @@ export default function Navbar() {
         isDark ? 'bg-gray-800 border-gray-700' : 'bg-white border-gray-200'
       } border-b shadow-md transition duration-200`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="w-full px-4 sm:px-6 lg:px-8">
+        <div className="max-w-full mx-auto">
+          <div className="flex justify-between items-center h-16">
           <div
             onClick={handleLogoClick}
             className="cursor-pointer flex items-center space-x-2"
@@ -70,6 +71,7 @@ export default function Navbar() {
               Logout
             </button>
           </div>
+        </div>
         </div>
       </div>
     </nav>
